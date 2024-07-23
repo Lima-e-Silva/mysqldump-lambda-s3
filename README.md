@@ -18,7 +18,7 @@
 2. Make sure to assign a permission that allows files to be inserted into S3
 3. [Create a Layer](https://console.aws.amazon.com/lambda/home#/layers) with [`mysqldump5.7-cli.zip`](https://github.com/Lima-e-Silva/mysqldump-lambda-s3/blob/main/mysqldump5.7-cli.zip)
 4. Paste the code from [`lambda_function.py`](https://github.com/Lima-e-Silva/mysqldump-lambda-s3/blob/main/lambda_function.py) into your Lambda
-5. Setup your Environment Variables <sup>[details](#env)</sup>
+5. Setup your Environment Variables
 6. Done!
 
 <h2 id="env">Environment Variables</h2>
