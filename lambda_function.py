@@ -47,7 +47,7 @@ def lambda_handler(event, context):
 
     s3 = boto3.client("s3")
 
-    fileName = backupMysql(prefix="RMdb")
+    fileName = backupMysql()
 
     s3.upload_file(fileName, bucketName, fileName.replace("/tmp", bucketFolder))
     return {"statusCode": 200, "body": json.dumps("success")}
