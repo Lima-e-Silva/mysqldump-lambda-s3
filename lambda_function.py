@@ -36,7 +36,7 @@ def backupMysql(prefix: str = "", suffix: str = "") -> str:
     """
     fileName = "/tmp/" + prefix + timeStamp() + suffix + ".sql"
     os.system(
-        f'mysqldump -p{os.getenv("PASSWORD")} --port {os.getenv("PORT")} --host {os.getenv("HOST")} --user root {os.getenv("DATABASE_NAME")} > {fileName}'
+        f"mysqldump -p{os.getenv('PASSWORD')} --port {os.getenv('PORT')} --host {os.getenv('HOST')} --user root --routines --triggers {os.getenv('DATABASE_NAME')} > {fileName}"
     )
 
     return fileName
